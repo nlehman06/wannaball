@@ -23,7 +23,9 @@
             <div class="flex items-center justify-between h-16">
                 <div class="flex items-center">
                     <div class="flex-shrink-0">
-                        <img class="h-8 w-8" src="/img/logos/basketball.svg" alt=""/>
+                        <a href="/">
+                            <img class="h-8 w-8" src="/img/logos/basketball.svg" alt=""/>
+                        </a>
                     </div>
                     @auth
                         <div class="hidden md:block">
