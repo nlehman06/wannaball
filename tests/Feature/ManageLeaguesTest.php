@@ -64,4 +64,11 @@ class ManageLeaguesTest extends TestCase
             ->post(route('league.store'), $leagueData->toArray())
             ->assertRedirect('login');
     }
+
+    /** @test */
+    public function going_to_the_create_league_route_loads_the_create_view()
+    {
+        $this->get(route('league.create'))
+            ->assertViewIs('league.create');
+    }
 }

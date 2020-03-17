@@ -2,10 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e01dc8f-a810-473a-ac43-0781bbebaae3" name="Default Changelist" comment="">
+      <change afterPath="$PROJECT_DIR$/resources/views/league/create.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/League.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/League.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/database/factories/MeetFactory.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/factories/MeetFactory.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Unit/LeagueTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/LeagueTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeagueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeagueController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -195,7 +195,7 @@
       <workItem from="1583952705892" duration="1714000" />
       <workItem from="1584027046382" duration="3601000" />
       <workItem from="1584387693593" duration="867000" />
-      <workItem from="1584463140237" duration="9590000" />
+      <workItem from="1584463140237" duration="10460000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1583775583300</created>
@@ -218,7 +218,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584470952531</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="League/Meet group by fix">
+      <created>1584472869549</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1584472869549</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -231,7 +238,8 @@
     <MESSAGE value="Initial Commit" />
     <MESSAGE value="Create League backend and tests.&#10;Welcome page shows dashboard for logged in users." />
     <MESSAGE value="Leagues have many Meets.&#10;Home dashboard will show top 5 recent leagues." />
-    <option name="LAST_COMMIT_MESSAGE" value="Leagues have many Meets.&#10;Home dashboard will show top 5 recent leagues." />
+    <MESSAGE value="League/Meet group by fix" />
+    <option name="LAST_COMMIT_MESSAGE" value="League/Meet group by fix" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2480" y="189" key="#CLI_Interpreters" timestamp="1583777030017">
@@ -250,11 +258,11 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2334" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956230055" />
-    <state x="2503" y="37" width="1401" height="1028" key="CommitChangelistDialog2" timestamp="1584470951194">
+    <state x="2064" y="37" width="1287" height="1028" key="CommitChangelistDialog2" timestamp="1584472868677">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="1979" y="-5" width="1401" height="1028" key="CommitChangelistDialog2/-3000.289.1500.980/0.0.1920.1040/1920.-5.1920.1080@1920.-5.1920.1080" timestamp="1584387959131" />
-    <state x="2503" y="37" key="CommitChangelistDialog2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584470951194" />
+    <state x="2064" y="37" width="1287" height="1028" key="CommitChangelistDialog2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584472868677" />
     <state x="455" y="0" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1583890276474" />
     <state x="2660" y="276" key="FileChooserDialogImpl" timestamp="1583777113907">
       <screen x="1920" y="-5" width="1920" height="1080" />
@@ -288,16 +296,16 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2602" y="276" width="552" height="540" key="StructurePopup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584468427096" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1584472766481">
+    <state width="498" height="446" key="SwitcherDM" timestamp="1584473118751">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/0.0.1920.1040/1920.-5.1920.1080@1920.-5.1920.1080" timestamp="1584387868604" />
-    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584472766481" />
+    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584473118751" />
     <state width="498" height="398" key="SwitcherDM/0.0.1500.960@0.0.1500.960" timestamp="1583889376021" />
-    <state x="2472" y="263" key="Vcs.Push.Dialog.v2" timestamp="1584470956912">
+    <state x="2472" y="263" key="Vcs.Push.Dialog.v2" timestamp="1584472915711">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
-    <state x="2472" y="263" key="Vcs.Push.Dialog.v2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584470956912" />
+    <state x="2472" y="263" key="Vcs.Push.Dialog.v2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584472915711" />
     <state x="2641" y="259" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration" timestamp="1583777142523">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
