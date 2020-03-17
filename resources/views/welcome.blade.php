@@ -100,7 +100,7 @@
                 </div>
             </div>
 
-            <div class="mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
+            <div class="relative z-10 mt-10 mx-auto max-w-screen-xl px-4 sm:mt-12 sm:px-6 md:mt-16 lg:mt-20 lg:px-8 xl:mt-28">
                 <div class="sm:text-center lg:text-left">
                     <h2 class="text-4xl tracking-tight leading-10 font-extrabold text-gray-900 sm:text-5xl sm:leading-none md:text-6xl">
                         Schedule and organize
@@ -132,7 +132,7 @@
             </svg>
         </div>
     </div>
-    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-1/2">
+    <div class="lg:absolute lg:inset-y-0 lg:right-0 lg:w-3/4">
         <img class="h-56 w-full object-cover sm:h-72 md:h-96 lg:w-full lg:h-full"
              src="https://images.unsplash.com/photo-1576426846595-64bac8ffd3a8?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1951&q=80"
              alt=""/>

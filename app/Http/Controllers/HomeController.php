@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\League;
 use Illuminate\Http\Request;
 
 class HomeController extends Controller
@@ -19,10 +20,11 @@ class HomeController extends Controller
     /**
      * Show the application dashboard.
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Contracts\View\Factory|\Illuminate\View\View
      */
     public function index()
     {
-        return view('home');
+        $topLeagues = League::recentlyMet()->limit(5)->get();
+        return view('home', compact('topLeagues'));
     }
 }

@@ -1,24 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="5e01dc8f-a810-473a-ac43-0781bbebaae3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/php-test-framework.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/remote-mappings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/LeagueController.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/Http/Requests/LeagueRequest.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/app/League.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/factories/LeagueFactory.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_09_175804_create_leagues_table.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/database/seeds/LeagueSeeder.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/resources/views/league/show.blade.php" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+    <list default="true" id="5e01dc8f-a810-473a-ac43-0781bbebaae3" name="Default Changelist" comment="Create League backend and tests.&#10;Welcome page shows dashboard for logged in users.">
+      <change afterPath="$PROJECT_DIR$/app/Http/Controllers/MeetController.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/Meet.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/factories/MeetFactory.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/migrations/2020_03_12_153807_create_meets_table.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/MeetSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Feature/HomeTest.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/HomeController.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/League.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/League.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/WelcomeTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Unit/ExampleTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Unit/LeagueTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -150,14 +145,21 @@
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/.." />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="reference.webide.settings.project.settings.php" />
   </component>
-  <component name="RunManager" selected="PHPUnit.WelcomeTest.signed_in_user_sees_dashboard">
-    <configuration name="ManageLeaguesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ManageLeaguesTest" configuration_file="/home/nlehman/code/wannaball/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" scope="Class" />
+  <component name="RunAnythingCache">
+    <option name="myCommands">
+      <command value="art " />
+      <command value="php artisan" />
+    </option>
+  </component>
+  <component name="RunManager" selected="PHPUnit.HomeTest.shows_the_top_five_leagues_by_most_recent_games">
+    <configuration name="HomeTest.shows_the_top_five_leagues_by_most_recent_games" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\HomeTest" configuration_file="/home/nlehman/code/wannaball/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/HomeTest.php" method="shows_the_top_five_leagues_by_most_recent_games" scope="Method" />
       <method v="2" />
     </configuration>
-    <configuration name="ManageLeaguesTest.a_league_requires_a_name" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
-      <TestRunner class="Tests\Feature\ManageLeaguesTest" configuration_file="/home/nlehman/code/wannaball/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" method="a_league_requires_a_name" scope="Method" />
+    <configuration name="ManageLeaguesTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
+      <TestRunner class="Tests\Feature\ManageLeaguesTest" configuration_file="/home/nlehman/code/wannaball/phpunit.xml" file="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" scope="Class" />
       <method v="2" />
     </configuration>
     <configuration name="WelcomeTest" type="PHPUnitRunConfigurationType" factoryName="PHPUnit" temporary="true">
@@ -178,11 +180,11 @@
     </configuration>
     <recent_temporary>
       <list>
+        <item itemvalue="PHPUnit.HomeTest.shows_the_top_five_leagues_by_most_recent_games" />
         <item itemvalue="PHPUnit.WelcomeTest.signed_in_user_sees_dashboard" />
         <item itemvalue="PHPUnit.WelcomeTest.guest_will_see_the_login_link" />
         <item itemvalue="PHPUnit.WelcomeTest" />
         <item itemvalue="PHPUnit.ManageLeaguesTest" />
-        <item itemvalue="PHPUnit.ManageLeaguesTest.a_league_requires_a_name" />
       </list>
     </recent_temporary>
   </component>
@@ -197,7 +199,11 @@
       <option name="presentableId" value="Default" />
       <updated>1583761016807</updated>
       <workItem from="1583761019127" duration="19230000" />
-      <workItem from="1583887995237" duration="2081000" />
+      <workItem from="1583887995237" duration="4017000" />
+      <workItem from="1583952705892" duration="1714000" />
+      <workItem from="1584027046382" duration="3601000" />
+      <workItem from="1584387693593" duration="867000" />
+      <workItem from="1584463140237" duration="7657000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1583775583300</created>
@@ -206,7 +212,14 @@
       <option name="project" value="LOCAL" />
       <updated>1583775583300</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="Create League backend and tests.&#10;Welcome page shows dashboard for logged in users.">
+      <created>1583890278567</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1583890278567</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -215,7 +228,8 @@
   <component name="VcsManagerConfiguration">
     <option name="ADD_EXTERNAL_FILES_SILENTLY" value="true" />
     <MESSAGE value="Initial Commit" />
-    <option name="LAST_COMMIT_MESSAGE" value="Initial Commit" />
+    <MESSAGE value="Create League backend and tests.&#10;Welcome page shows dashboard for logged in users." />
+    <option name="LAST_COMMIT_MESSAGE" value="Create League backend and tests.&#10;Welcome page shows dashboard for logged in users." />
   </component>
   <component name="WindowStateProjectService">
     <state x="2480" y="189" key="#CLI_Interpreters" timestamp="1583777030017">
@@ -230,42 +244,53 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2606" y="89" width="588" height="891" key="#PHP/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583777144787" />
-    <state x="2503" y="37" key="CommitChangelistDialog2" timestamp="1583775581421">
+    <state x="2334" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1583956230055">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
+    <state x="2334" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956230055" />
+    <state x="1979" y="-5" width="1401" height="1028" key="CommitChangelistDialog2" timestamp="1584387959131">
+      <screen x="1920" y="-5" width="1920" height="1080" />
+    </state>
+    <state x="1979" y="-5" width="1401" height="1028" key="CommitChangelistDialog2/-3000.289.1500.980/0.0.1920.1040/1920.-5.1920.1080@1920.-5.1920.1080" timestamp="1584387959131" />
     <state x="2503" y="37" key="CommitChangelistDialog2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583775581420" />
+    <state x="455" y="0" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1583890276474" />
     <state x="2660" y="276" key="FileChooserDialogImpl" timestamp="1583777113907">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2660" y="276" key="FileChooserDialogImpl/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583777113907" />
-    <state width="1502" height="471" key="GridCell.Tab.0.bottom" timestamp="1583890187144">
+    <state width="1502" height="471" key="GridCell.Tab.0.bottom" timestamp="1583892045653">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1921" height="537" key="GridCell.Tab.0.bottom/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583786450543" />
-    <state width="1502" height="471" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1583890187144" />
-    <state width="1502" height="471" key="GridCell.Tab.0.center" timestamp="1583890187144">
+    <state width="1502" height="471" key="GridCell.Tab.0.bottom/0.0.1500.960@0.0.1500.960" timestamp="1583892045653" />
+    <state width="1502" height="471" key="GridCell.Tab.0.center" timestamp="1583892045653">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1921" height="537" key="GridCell.Tab.0.center/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583786450543" />
-    <state width="1502" height="471" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1583890187144" />
-    <state width="1502" height="471" key="GridCell.Tab.0.left" timestamp="1583890187144">
+    <state width="1502" height="471" key="GridCell.Tab.0.center/0.0.1500.960@0.0.1500.960" timestamp="1583892045653" />
+    <state width="1502" height="471" key="GridCell.Tab.0.left" timestamp="1583892045653">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1921" height="537" key="GridCell.Tab.0.left/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583786450543" />
-    <state width="1502" height="471" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1583890187144" />
-    <state width="1502" height="471" key="GridCell.Tab.0.right" timestamp="1583890187144">
+    <state width="1502" height="471" key="GridCell.Tab.0.left/0.0.1500.960@0.0.1500.960" timestamp="1583892045653" />
+    <state width="1502" height="471" key="GridCell.Tab.0.right" timestamp="1583892045653">
       <screen x="0" y="0" width="1500" height="960" />
     </state>
     <state width="1921" height="537" key="GridCell.Tab.0.right/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583786450543" />
-    <state width="1502" height="471" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1583890187144" />
-    <state x="2602" y="276" width="540" height="540" key="StructurePopup" timestamp="1583777616391">
+    <state width="1502" height="471" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1583892045653" />
+    <state x="2381" y="177" key="SettingsEditor" timestamp="1583956888994">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
-    <state x="2602" y="276" width="540" height="540" key="StructurePopup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583777616391" />
-    <state width="498" height="398" key="SwitcherDM" timestamp="1583889376021">
-      <screen x="0" y="0" width="1500" height="960" />
+    <state x="2381" y="177" key="SettingsEditor/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956888994" />
+    <state x="2602" y="276" width="552" height="540" key="StructurePopup" timestamp="1584468427096">
+      <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
-    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583782553363" />
+    <state x="2602" y="276" width="552" height="540" key="StructurePopup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584468427096" />
+    <state width="498" height="446" key="SwitcherDM" timestamp="1584470212616">
+      <screen x="1920" y="-5" width="1920" height="1080" />
+    </state>
+    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/0.0.1920.1040/1920.-5.1920.1080@1920.-5.1920.1080" timestamp="1584387868604" />
+    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584470212616" />
     <state width="498" height="398" key="SwitcherDM/0.0.1500.960@0.0.1500.960" timestamp="1583889376021" />
     <state x="2472" y="263" key="Vcs.Push.Dialog.v2" timestamp="1583775610391">
       <screen x="1920" y="-5" width="1920" height="1080" />
@@ -275,10 +300,22 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2641" y="259" key="com.jetbrains.plugins.remotesdk.ui.RemoteMappingsConfiguration/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583777142523" />
-    <state x="488" y="210" width="672" height="603" key="search.everywhere.popup" timestamp="1583888292347">
-      <screen x="0" y="0" width="1500" height="960" />
+    <state x="2566" y="109" width="627" height="852" key="find.popup" timestamp="1584467623889">
+      <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
-    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583782818484" />
-    <state x="488" y="210" width="672" height="603" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1583888292347" />
+    <state x="2566" y="109" width="627" height="852" key="find.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584467623889" />
+    <state x="2597" y="343" key="jetbrains.nodejs.interpreters-dialog" timestamp="1583956645109">
+      <screen x="1920" y="-5" width="1920" height="1080" />
+    </state>
+    <state x="2597" y="343" key="jetbrains.nodejs.interpreters-dialog/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956645109" />
+    <state x="2537" y="248" width="672" height="677" key="run.anything.popup" timestamp="1583956364329">
+      <screen x="1920" y="-5" width="1920" height="1080" />
+    </state>
+    <state x="2537" y="248" width="672" height="677" key="run.anything.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956364329" />
+    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1584467756447">
+      <screen x="1920" y="-5" width="1920" height="1080" />
+    </state>
+    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584467756447" />
+    <state x="489" y="211" width="672" height="603" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1583890300750" />
   </component>
 </project>
