@@ -15,9 +15,9 @@ class League extends Model
 
     public function scopeRecentlyMet($query)
     {
-        return $query->join('meets', 'meets.league_id', '=', 'leagues.id')
+        return $query->leftJoin('meets', 'meets.league_id', '=', 'leagues.id')
             ->groupBy(['leagues.id'])
-            ->latest('meets.meet_date')
+            ->orderByRaw('max(meets.meet_date) desc')
             ->select('leagues.*');
     }
 }

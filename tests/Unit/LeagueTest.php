@@ -27,9 +27,18 @@ class LeagueTest extends TestCase
         $second = factory(League::class)->create();
         $first = factory(League::class)->create();
 
-        $second->meets()->save(factory(Meet::class)->make(['meet_date' => today()->subDay()]));
-        $first->meets()->save(factory(Meet::class)->make(['meet_date' => today()->subDays(2)]));
-        $first->meets()->save(factory(Meet::class)->make(['meet_date' => today()]));
+        $second->meets()->save(factory(Meet::class)->make([
+            'league_id' => $second->id,
+            'meet_date' => today()->subDay()
+        ]));
+        $first->meets()->save(factory(Meet::class)->make([
+            'league_id' => $second->id,
+            'meet_date' => today()->subDays(2)
+        ]));
+        $first->meets()->save(factory(Meet::class)->make([
+            'league_id' => $second->id,
+            'meet_date' => today()
+        ]));
 
         $leagues = League::recentlyMet()->get();
 
