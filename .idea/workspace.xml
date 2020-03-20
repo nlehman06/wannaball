@@ -2,10 +2,32 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="5e01dc8f-a810-473a-ac43-0781bbebaae3" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/resources/views/league/create.blade.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.env.dusk.local" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/app/UsesUuid.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/database/seeds/UsersTableSeeder.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Browser/CreateLeagueTest.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Browser/Pages/HomePage.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Browser/Pages/Page.php" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Browser/console/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/Browser/screenshots/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/tests/DuskTestCase.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/php.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/php.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/wannaball.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/wannaball.iml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/LeagueController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/LeagueController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/ManageLeaguesTest.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/League.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/League.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Meet.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Meet.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.json" beforeDir="false" afterPath="$PROJECT_DIR$/composer.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/composer.lock" beforeDir="false" afterPath="$PROJECT_DIR$/composer.lock" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_09_175804_create_leagues_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_09_175804_create_leagues_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_03_12_153807_create_meets_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_03_12_153807_create_meets_table.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/seeds/DatabaseSeeder.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/layouts/app.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/league/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/league/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/league/show.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/league/show.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/tests/Feature/HomeTest.php" beforeDir="false" afterPath="$PROJECT_DIR$/tests/Feature/HomeTest.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -18,8 +40,27 @@
       <executable />
     </execution>
   </component>
+  <component name="DatabaseView">
+    <option name="SHOW_INTERMEDIATE" value="true" />
+    <option name="GROUP_DATA_SOURCES" value="true" />
+    <option name="GROUP_SCHEMA" value="true" />
+    <option name="GROUP_CONTENTS" value="false" />
+    <option name="SORT_POSITIONED" value="false" />
+    <option name="SHOW_EMPTY_GROUPS" value="false" />
+    <option name="AUTO_SCROLL_FROM_SOURCE" value="false" />
+    <option name="HIDDEN_KINDS">
+      <set />
+    </option>
+    <expand />
+    <select />
+  </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="JsbtTreeLayoutManager">
+    <layout place="tools.popupnpm">
+      <scroll-view-position x="0" y="0" />
+    </layout>
   </component>
   <component name="PhpWorkspaceProjectConfiguration" interpreter_name="Ubuntu">
     <include_path>
@@ -119,6 +160,8 @@
       <path value="$PROJECT_DIR$/vendor/symfony/polyfill-php72" />
       <path value="$PROJECT_DIR$/vendor/laravel-frontend-presets/tailwindcss" />
       <path value="$PROJECT_DIR$/vendor/laravel/ui" />
+      <path value="$PROJECT_DIR$/vendor/php-webdriver/webdriver" />
+      <path value="$PROJECT_DIR$/vendor/laravel/dusk" />
     </include_path>
   </component>
   <component name="ProjectId" id="1YtTiNB3dQokflRSXevkVM8Wuow" />
@@ -195,7 +238,9 @@
       <workItem from="1583952705892" duration="1714000" />
       <workItem from="1584027046382" duration="3601000" />
       <workItem from="1584387693593" duration="867000" />
-      <workItem from="1584463140237" duration="10460000" />
+      <workItem from="1584463140237" duration="12089000" />
+      <workItem from="1584491887577" duration="6698000" />
+      <workItem from="1584663431908" duration="8704000" />
     </task>
     <task id="LOCAL-00001" summary="Initial Commit">
       <created>1583775583300</created>
@@ -225,7 +270,14 @@
       <option name="project" value="LOCAL" />
       <updated>1584472869549</updated>
     </task>
-    <option name="localTasksCounter" value="5" />
+    <task id="LOCAL-00005" summary="create league blade">
+      <created>1584473631235</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1584473631235</updated>
+    </task>
+    <option name="localTasksCounter" value="6" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -239,7 +291,8 @@
     <MESSAGE value="Create League backend and tests.&#10;Welcome page shows dashboard for logged in users." />
     <MESSAGE value="Leagues have many Meets.&#10;Home dashboard will show top 5 recent leagues." />
     <MESSAGE value="League/Meet group by fix" />
-    <option name="LAST_COMMIT_MESSAGE" value="League/Meet group by fix" />
+    <MESSAGE value="create league blade" />
+    <option name="LAST_COMMIT_MESSAGE" value="create league blade" />
   </component>
   <component name="WindowStateProjectService">
     <state x="2480" y="189" key="#CLI_Interpreters" timestamp="1583777030017">
@@ -258,11 +311,11 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2334" y="189" key="#com.intellij.execution.impl.EditConfigurationsDialog/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956230055" />
-    <state x="2064" y="37" width="1287" height="1028" key="CommitChangelistDialog2" timestamp="1584472868677">
+    <state x="2064" y="37" width="1287" height="1028" key="CommitChangelistDialog2" timestamp="1584473630295">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="1979" y="-5" width="1401" height="1028" key="CommitChangelistDialog2/-3000.289.1500.980/0.0.1920.1040/1920.-5.1920.1080@1920.-5.1920.1080" timestamp="1584387959131" />
-    <state x="2064" y="37" width="1287" height="1028" key="CommitChangelistDialog2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584472868677" />
+    <state x="2064" y="37" width="1287" height="1028" key="CommitChangelistDialog2/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584473630295" />
     <state x="455" y="0" key="CommitChangelistDialog2/0.0.1500.960@0.0.1500.960" timestamp="1583890276474" />
     <state x="2660" y="276" key="FileChooserDialogImpl" timestamp="1583777113907">
       <screen x="1920" y="-5" width="1920" height="1080" />
@@ -288,6 +341,14 @@
     </state>
     <state width="1921" height="537" key="GridCell.Tab.0.right/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583786450543" />
     <state width="1502" height="471" key="GridCell.Tab.0.right/0.0.1500.960@0.0.1500.960" timestamp="1583892045653" />
+    <state width="196" height="539" key="HiddenNamespacesPopup" timestamp="1584498495064">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state width="196" height="539" key="HiddenNamespacesPopup/0.0.1500.960@0.0.1500.960" timestamp="1584498495064" />
+    <state x="779" y="318" key="NewPhpClassDialog" timestamp="1584669882204">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="779" y="318" key="NewPhpClassDialog/-3000.0.1500.980/0.0.1920.1040@0.0.1920.1040" timestamp="1584669882204" />
     <state x="2381" y="177" key="SettingsEditor" timestamp="1583956888994">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
@@ -296,12 +357,13 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2602" y="276" width="552" height="540" key="StructurePopup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584468427096" />
-    <state width="498" height="446" key="SwitcherDM" timestamp="1584473118751">
-      <screen x="1920" y="-5" width="1920" height="1080" />
+    <state width="638" height="432" key="SwitcherDM" timestamp="1584711979822">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
+    <state width="638" height="432" key="SwitcherDM/-3000.0.1500.980/0.0.1920.1040@0.0.1920.1040" timestamp="1584711979822" />
     <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/0.0.1920.1040/1920.-5.1920.1080@1920.-5.1920.1080" timestamp="1584387868604" />
-    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584473118751" />
-    <state width="498" height="398" key="SwitcherDM/0.0.1500.960@0.0.1500.960" timestamp="1583889376021" />
+    <state width="498" height="446" key="SwitcherDM/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584473905501" />
+    <state width="498" height="398" key="SwitcherDM/0.0.1500.960@0.0.1500.960" timestamp="1584502363523" />
     <state x="2472" y="263" key="Vcs.Push.Dialog.v2" timestamp="1584472915711">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
@@ -314,6 +376,10 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2566" y="109" width="627" height="852" key="find.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584467623889" />
+    <state x="619" y="348" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup" timestamp="1584492909774">
+      <screen x="0" y="0" width="1500" height="960" />
+    </state>
+    <state x="619" y="348" width="250" height="278" key="jetbrains.javascript.buildTools.run-task-popup/0.0.1500.960@0.0.1500.960" timestamp="1584492909774" />
     <state x="2597" y="343" key="jetbrains.nodejs.interpreters-dialog" timestamp="1583956645109">
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
@@ -322,10 +388,11 @@
       <screen x="1920" y="-5" width="1920" height="1080" />
     </state>
     <state x="2537" y="248" width="672" height="677" key="run.anything.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1583956364329" />
-    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup" timestamp="1584467756447">
-      <screen x="1920" y="-5" width="1920" height="1080" />
+    <state x="627" y="230" width="861" height="654" key="search.everywhere.popup" timestamp="1584711627037">
+      <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584467756447" />
-    <state x="489" y="211" width="672" height="603" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1583890300750" />
+    <state x="627" y="230" width="861" height="654" key="search.everywhere.popup/-3000.0.1500.980/0.0.1920.1040@0.0.1920.1040" timestamp="1584711627037" />
+    <state x="2543" y="230" width="672" height="678" key="search.everywhere.popup/-3000.289.1500.980/1920.-5.1920.1080/0.0.1920.1040@1920.-5.1920.1080" timestamp="1584474681883" />
+    <state x="490" y="212" width="672" height="603" key="search.everywhere.popup/0.0.1500.960@0.0.1500.960" timestamp="1584492410933" />
   </component>
 </project>

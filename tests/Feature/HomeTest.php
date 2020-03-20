@@ -51,6 +51,6 @@ class HomeTest extends TestCase
     public function shows_create_league_link_if_not_apart_of_any_leagues()
     {
         $this->get(route("home"))
-            ->assertSee("You aren't apart of any leagues yet.  Would you like to <a href=\"http://wannaball.test/league/create\">create one</a>?", false);
+            ->assertSee("href=\"http://wannaball.test/league/create\"", false);
     }
 }

@@ -15,7 +15,7 @@
 
     <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.0.1/dist/alpine.js" defer></script>
 </head>
-<body class="antialiased">
+<body class="antialiased bg-gray-100">
 
 <div>
     <nav x-data="{ open: false }" @keydown.window.escape="open = false" class="bg-gray-800">
@@ -30,16 +30,14 @@
                     @auth
                         <div class="hidden md:block">
                             <div class="ml-10 flex items-baseline">
+                                <a href="{{ route('home') }}"
+                                   class="px-3 py-2 rounded-md text-sm font-medium @if(request()->is('home')) text-white bg-gray-900 @else text-gray-300 hover:text-white hover:bg-gray-700 @endif focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</a>
+                                <a href="{{ route('league.index') }}"
+                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium @if(request()->is('league/*')) text-white bg-gray-900 @else text-gray-300 hover:text-white hover:bg-gray-700 @endif focus:outline-none focus:text-white focus:bg-gray-700">Leagues</a>
                                 <a href="#"
-                                   class="px-3 py-2 rounded-md text-sm font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</a>
+                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium @if(request()->is('meet/*')) text-white bg-gray-900 @else text-gray-300 hover:text-white hover:bg-gray-700 @endif focus:outline-none focus:text-white focus:bg-gray-700">Meets</a>
                                 <a href="#"
-                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Team</a>
-                                <a href="#"
-                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Projects</a>
-                                <a href="#"
-                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Calendar</a>
-                                <a href="#"
-                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Reports</a>
+                                   class="ml-4 px-3 py-2 rounded-md text-sm font-medium @if(request()->is('stats')) text-white bg-gray-900 @else text-gray-300 hover:text-white hover:bg-gray-700 @endif focus:outline-none focus:text-white focus:bg-gray-700">Stats</a>
                             </div>
                         </div>
                     @endauth
@@ -87,7 +85,8 @@
                                             onclick="event.preventDefault(); document.getElementById('logout-form').submit();"
                                             class="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100"
                                         >Sign out</a>
-                                        <form id="logout-form" action="{{ route('logout') }}" method="POST" class="hidden">
+                                        <form id="logout-form" action="{{ route('logout') }}" method="POST"
+                                              class="hidden">
                                             {{ csrf_field() }}
                                         </form>
                                     </div>
@@ -120,16 +119,14 @@
                 @endif
             @else
                 <div class="px-2 pt-2 pb-3 sm:px-3">
-                    <a href="#"
+                    <a href="{{ route('home') }}"
                        class="block px-3 py-2 rounded-md text-base font-medium text-white bg-gray-900 focus:outline-none focus:text-white focus:bg-gray-700">Dashboard</a>
+                    <a href="{{ route('league.index') }}"
+                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Leagues</a>
                     <a href="#"
-                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Team</a>
+                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Meets</a>
                     <a href="#"
-                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Projects</a>
-                    <a href="#"
-                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Calendar</a>
-                    <a href="#"
-                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Reports</a>
+                       class="mt-1 block px-3 py-2 rounded-md text-base font-medium text-gray-300 hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700">Stats</a>
                 </div>
                 <div class="pt-4 pb-3 border-t border-gray-700">
                     <div class="flex items-center px-5">
@@ -140,7 +137,8 @@
                         </div>
                         <div class="ml-3">
                             <div class="text-base font-medium leading-none text-white">{{ auth()->user()->name }}</div>
-                            <div class="mt-1 text-sm font-medium leading-none text-gray-400">{{ auth()->user()->email }}</div>
+                            <div
+                                class="mt-1 text-sm font-medium leading-none text-gray-400">{{ auth()->user()->email }}</div>
                         </div>
                     </div>
                     <div class="mt-3 px-2">
@@ -168,6 +166,13 @@
             @yield('content')
         </div>
     </main>
+
+    @if (session('status'))
+        <div class="text-sm border border-t-8 rounded text-green-700 border-green-600 bg-green-100 px-3 py-4 mb-4"
+             role="alert">
+            {{ session('status') }}
+        </div>
+    @endif
 </div>
 
 <!-- Scripts -->

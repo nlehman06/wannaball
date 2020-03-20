@@ -14,7 +14,7 @@ class CreateMeetsTable extends Migration
     public function up()
     {
         Schema::create('meets', function (Blueprint $table) {
-            $table->id();
+            $table->uuid('id')->primary();
             $table->unsignedInteger('league_id');
             $table->date('meet_date');
             $table->time('meet_time');
