@@ -4,8 +4,8 @@ namespace App;
 
 use Illuminate\Database\Eloquent\Model;
 
-class League extends Model
-{
+class League extends Model {
+
     use UsesUuid;
 
     protected $guarded = [];
@@ -13,6 +13,12 @@ class League extends Model
     public function meets()
     {
         return $this->hasMany(Meet::class);
+    }
+
+    public function admins()
+    {
+        return $this->belongsToMany(User::class, 'league_admins', 'league_id', 'user_id')
+            ->withTimestamps();
     }
 
     public function scopeRecentlyMet($query)

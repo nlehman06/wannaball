@@ -5,7 +5,6 @@
 use App\League;
 use App\Meet;
 use Faker\Generator as Faker;
-use Illuminate\Support\Str;
 
 $factory->define(Meet::class, function (Faker $faker) {
     return [

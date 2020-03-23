@@ -11,8 +11,8 @@ use Illuminate\Http\Response;
 use Illuminate\Routing\Redirector;
 use Illuminate\View\View;
 
-class LeagueController extends Controller
-{
+class LeagueController extends Controller {
+
     /**
      * Display a listing of the resource.
      *
@@ -41,7 +41,10 @@ class LeagueController extends Controller
      */
     public function store(LeagueRequest $request)
     {
-        $league = League::create($request->all());
+        $league = auth()->user()->leagues()->create($request->all());
+
+        $league->admins()->attach(auth()->id());
+
         return redirect(route('league.show', $league->id));
     }
 
@@ -70,13 +73,15 @@ class LeagueController extends Controller
     /**
      * Update the specified resource in storage.
      *
-     * @param Request $request
+     * @param LeagueRequest $request
      * @param League $league
-     * @return Response
+     * @return RedirectResponse|Redirector
      */
-    public function update(Request $request, League $league)
+    public function update(LeagueRequest $request, League $league)
     {
-        //
+        $league->update($request->all());
+
+        return redirect(route('league.show', $league));
     }
 
     /**
