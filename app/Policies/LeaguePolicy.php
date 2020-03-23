@@ -30,7 +30,7 @@ class LeaguePolicy
      */
     public function view(User $user, League $league)
     {
-        //
+        return $league->members->contains($user);
     }
 
     /**
@@ -41,7 +41,7 @@ class LeaguePolicy
      */
     public function create(User $user)
     {
-        //
+        return true;
     }
 
     /**

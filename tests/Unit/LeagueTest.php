@@ -73,4 +73,17 @@ class LeagueTest extends TestCase
 
         $this->assertCount(1, $leagueWithAdmin);
     }
+    /** @test */
+    public function the_creator_is_automatically_added_to_the_members()
+    {
+        $this->actingAs($user = factory(User::class)->create());
+        $league = factory(League::class)->make();
+        $this->post(route('league.store'), $league->toArray());
+
+        $leagueWithMember = League::whereHas('members', function(Builder $query) use ($user) {
+            return $query->where('user_id', $user->id);
+        })->get();
+
+        $this->assertCount(1, $leagueWithMember);
+    }
 }

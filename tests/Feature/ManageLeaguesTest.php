@@ -97,14 +97,11 @@ class ManageLeaguesTest extends TestCase
      */
     public function a_user_may_edit_a_league()
     {
-        $leagueData = factory(League::class)->make();
-        $this->post(route('league.store'), $leagueData->toArray());
-        $league = League::first();
+        $league = $this->createLeague();
         $league->name = 'Changed League';
-        $changes = $league->toArray();
 
         $this->followingRedirects()
-            ->patch(route('league.update', $league), $changes)
+            ->patch(route('league.update', $league), $league->toArray())
             ->assertOk()
             ->assertViewIs('league.show')
             ->assertSee('Changed League');
@@ -116,14 +113,11 @@ class ManageLeaguesTest extends TestCase
      */
     public function editing_league_has_validation_rules()
     {
-        $leagueData = factory(League::class)->make();
-        $this->post(route('league.store'), $leagueData->toArray());
-        $league = League::first();
+        $league = $this->createLeague();
         $league->name = 'Ch';
-        $changes = $league->toArray();
 
         $this->withExceptionHandling()
-            ->patch(route('league.update', $league), $changes)
+            ->patch(route('league.update', $league), $league->toArray())
             ->assertSessionHasErrors('name');
     }
 
@@ -154,5 +148,61 @@ class ManageLeaguesTest extends TestCase
             ->actingAs(factory(User::class)->create())
             ->patch(route('league.update', $league), $league->toArray())
             ->assertForbidden();
+    }
+
+    // View
+
+    /**
+     * @test
+     * @group viewLeague
+     */
+    public function an_admin_can_view_the_league()
+    {
+        $league = $this->createLeague();
+
+        $this->get(route('league.show', $league))
+            ->assertOk()
+            ->assertSee($league->name);
+    }
+
+    /**
+     * @test
+     * @group viewLeague
+     */
+    public function a_random_user_may_not_view_a_league()
+    {
+        $league = $this->createLeague();
+
+        $this->withExceptionHandling()
+            ->actingAs(factory(User::class)->create())
+            ->get(route('league.show', $league))
+            ->assertForbidden();
+
+    }
+
+    /**
+     * @test
+     * @group viewLeague
+     */
+    public function a_league_member_may_view_the_league()
+    {
+        $league = $this->createLeague();
+
+        $member = factory(User::class)->create();
+        $this->post(route('member.store', [$league, $member]));
+
+        $this->actingAs($member)
+            ->get(route('league.show', $league))
+            ->assertOk();
+    }
+
+    /**
+     * @return mixed
+     */
+    private function createLeague()
+    {
+        $leagueData = factory(League::class)->make();
+        $this->post(route('league.store'), $leagueData->toArray());
+        return League::whereName($leagueData->name)->first();
     }
 }

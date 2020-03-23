@@ -23,5 +23,7 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::middleware(['auth'])->group(function() {
     Route::resource('league', 'LeagueController');
+
+    Route::post('league/{league}/member/{member}', 'LeagueMemberController@store')->name('member.store');
 });
 

@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\LeagueRequest;
 use App\League;
+use Illuminate\Auth\Access\AuthorizationException;
 use Illuminate\Contracts\View\Factory;
 use Illuminate\Http\RedirectResponse;
 use Illuminate\Http\Request;
@@ -44,6 +45,7 @@ class LeagueController extends Controller {
         $league = auth()->user()->leagues()->create($request->all());
 
         $league->admins()->attach(auth()->id());
+        $league->members()->attach(auth()->id());
 
         return redirect(route('league.show', $league->id));
     }
@@ -53,9 +55,12 @@ class LeagueController extends Controller {
      *
      * @param League $league
      * @return Factory|View
+     * @throws AuthorizationException
      */
     public function show(League $league)
     {
+        $this->authorize('view', $league);
+
         return view('league.show', ['league' => $league]);
     }
 

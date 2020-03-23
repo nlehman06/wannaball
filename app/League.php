@@ -21,6 +21,12 @@ class League extends Model {
             ->withTimestamps();
     }
 
+    public function members()
+    {
+        return $this->belongsToMany(User::class, 'league_members', 'league_id', 'user_id')
+            ->withTimestamps();
+    }
+
     public function scopeRecentlyMet($query)
     {
         return $query->leftJoin('meets', 'meets.league_id', '=', 'leagues.id')

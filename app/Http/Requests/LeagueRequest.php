@@ -15,8 +15,6 @@ class LeagueRequest extends FormRequest
     public function authorize()
     {
         if($this->method() === 'PATCH') {
-//            $league = League::first($this->route('league'));
-//            dd($league->name);
             return $this->user()->can('update', $this->league);
         }
         return true;
